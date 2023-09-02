@@ -9,6 +9,3 @@ for(let i=1;i<=number;i++)
 if(fact==2){
     console.log("Prime")
 }
-else{
-    console.log("Not Prime")
-}
