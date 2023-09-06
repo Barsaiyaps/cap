@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+    <input id="first" placeholder="enter 1st number">
+    <input id="second" placeholder="enter 2nd number">
+</div>
+<div>
+    <button id="add" onclick="add()">Add</button>
+    <button id="sub" onclick="sub()">Subtract</button>
+    <button id="multi" onclick="multi()">Multiply</button>
+    <button id="div" onclick="div()">Divide</button>
+</div>
+</body>
+</html>
+<script>
+    function add(){
+        alert(+document.getElementById("first").value+(+document.getElementById("second").value))
+    }
+    function sub(){
+        alert(+document.getElementById("first").value-(+document.getElementById("second").value))
+    }
+    function multi(){
+        alert(+document.getElementById("first").value*(+document.getElementById("second").value))
+    }
+    function div(){
+        alert(+document.getElementById("first").value/(+document.getElementById("second").value))
+    }
+</script>
