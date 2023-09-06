@@ -1,0 +1,119 @@
+<html>
+    <head>
+       <style>
+        h1 {
+            text-align:center;
+            color: rgb(12, 122, 166);
+        }
+        #rect {
+         border:1px solid white;
+         width:300px;
+         height:400px;
+         margin:auto;
+         margin-top: 50px;
+         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         border-radius: 5px;
+        }
+        #rect>div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width:80%;
+            height:15%;
+            margin:auto;
+            margin-top: 35px;
+            border-radius: 5px;
+          
+        }
+        #rect>div~div{
+            box-shadow: rgba(205, 253, 12, 0.24) 0px 3px 8px;
+            width:80%;
+            height:15%;
+            margin:auto;
+            margin-top: 10px;
+            border-radius: 5px;
+            display:flex
+        }
+        #rect>div>div{
+           
+            width:23%;
+            height:auto;
+            margin:auto;
+            font-weight: 1000;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 5px;
+            padding:20px 0 20px 0;
+        }
+        #rect>div>div~div~div~div{
+            background-color: black;
+            color:aliceblue
+        }
+        #rect>div~div~div~div~div>div~div~div{
+            background-color: black;
+            color:aliceblue
+        }
+        #rect>div~div~div~div~div>div{
+            background-color: red;
+            color:aliceblue
+        }
+        #rect>div~div~div~div~div>div+div{
+            background-color: white;
+            color:black
+        }
+       </style>
+    </head>
+    <body>
+        <h1>Masai Calculator</h1>
+        <div id="rect">
+            <div id="out"></div>
+            <div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div id="sum">+</div>
+            </div>
+            <div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div id="sub">-</div>
+            </div>
+            <div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div id="multi">*</div>
+            </div>
+            <div>
+                <div id="clear" onclick="clear()">c</div>
+                <div>0</div>
+                <div id="equal">=</div>
+                <div id="divid">/</div>
+            </div>
+          
+        </div>
+    </body>
+</html>
+
+<script>
+
+    let numm=document.querySelectorAll("#rect>div>div")//array
+    let sum=document.getElementById("sum")
+    let sub=document.getElementById("sub")
+    let multi=document.getElementById("multi")
+    let divid=document.getElementById("divid")
+    let equal=document.getElementById("equal")
+    let out=document.getElementById("out")
+    console.log(numm)
+    let firstNumber=0;
+    let secondNmber=0;
+    for (let i=0;i<numm.length;i++){
+        console.log(numm[i])
+        numm[i].addEventListener("click",function(){
+           
+            firstNumber=+(firstNumber)+(+numm[i].innerText);
+            out.innerText=firstNumber;
+            
+        })
+    }
+    </script>
