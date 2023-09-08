@@ -85,9 +85,9 @@
                 <div id="multi">*</div>
             </div>
             <div>
-                <div id="clear" onclick="clear()">c</div>
+                <div id="clear">c</div>
                 <div>0</div>
-                <div id="equal">=</div>
+                <div id="equal1">=</div>
                 <div id="divid">/</div>
             </div>
           
@@ -102,18 +102,25 @@
     let sub=document.getElementById("sub")
     let multi=document.getElementById("multi")
     let divid=document.getElementById("divid")
-    let equal=document.getElementById("equal")
+    let equal=document.getElementById("equal1")
     let out=document.getElementById("out")
     console.log(numm)
-    let firstNumber=0;
-    let secondNmber=0;
+
+      out.innerText=0;
     for (let i=0;i<numm.length;i++){
-        console.log(numm[i])
+       
         numm[i].addEventListener("click",function(){
-           
-            firstNumber=+(firstNumber)+(+numm[i].innerText);
-            out.innerText=firstNumber;
-            
+           if(numm[i].innerText=="c"){
+            out.innerText=""
+           }else if(numm[i].innerText=="="){
+           out.innerText=eval(out.innerText)
+           }else{
+            out.innerText=out.innerText+numm[i].innerText;
+            console.log(numm[i].innerText)
+           }
         })
-    }
+    }    
+//console.log(out.innerText)
+  
+    
     </script>
