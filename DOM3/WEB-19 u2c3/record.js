@@ -1,1 +1,70 @@
-// fill in javascript code here
+let form=document.querySelector("form")
+let name=document.getElementById("name")
+let employeeID=document.getElementById("employeeID")
+let department=document.getElementById("department")
+let exp=document.getElementById("exp")
+let email=document.getElementById("email")
+let mbl=document.getElementById("mbl")
+let tbody= document.querySelector("tbody")
+let arr=[];
+
+form.addEventListener("submit",function(e){
+    e.preventDefault();
+    arr=[]
+    data=
+    {
+        name:name.value,
+        employeeID:employeeID.value,
+        department:department.value,
+        exp:exp.value,
+        email:email.value,
+        mbl:mbl.value
+    }
+
+    arr.push(data)
+
+
+    arr.map((ele)=>
+    {
+      const tr=document.createElement("tr")
+      const td1=document.createElement("td")
+      const td2=document.createElement("td")
+      const td3=document.createElement("td")
+      const td4=document.createElement("td")
+      const td5=document.createElement("td")
+      const td6=document.createElement("td")
+      const td7=document.createElement("td")
+      const td8=document.createElement("td")
+      
+      td1.innerText=ele.name;
+      td2.innerText=ele.employeeID;
+      td3.innerText=ele.department;
+      td4.innerText=ele.exp;
+      td5.innerText=ele.email;
+      td6.innerText=ele.mbl;
+      if(td4.innerText>5){
+        td7.innerText="Senior"
+      }else if(td4.innerText<5 && td4.innerText>2){
+        td7.innerText="Junior"
+      }else{
+        td7.innerText="Fresher"
+      }
+      td8.innerText="Delete"
+      
+      
+    //   console.log(tbody)
+    
+    td8.onclick=function(){
+        for(let i=0;i<arr.length;i++){
+            console.log("My Name is Pankaj")
+            arr.splice(i,1);
+       
+      }}
+ 
+      tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
+      tbody.append(tr)
+    })
+        
+    
+})
+
