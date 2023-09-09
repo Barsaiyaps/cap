@@ -55,11 +55,19 @@ form.addEventListener("submit",function(e){
     //   console.log(tbody)
     
     td8.onclick=function(){
-        for(let i=0;i<arr.length;i++){
-            console.log("My Name is Pankaj")
-            arr.splice(i,1);
-       
-      }}
+      // ar=document.querySelector("td","td")
+       td1.innerHTML=[];
+       td2.innerHTML=[];
+       td3.innerHTML=[];
+       td4.innerHTML=[];
+       td5.innerHTML=[];
+       td6.innerHTML=[];
+       td7.innerHTML=[];
+       td8.innerHTML=[];
+       console.log("My name is Pankaj")
+       console.log(arr)
+       arr.splice(ele,1)
+     }
  
       tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
       tbody.append(tr)
