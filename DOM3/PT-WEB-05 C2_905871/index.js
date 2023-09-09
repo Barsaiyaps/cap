@@ -1,6 +1,6 @@
 let form=document.querySelector("form")
 let name=document.getElementById("name")
-let docId=document.getElementById("docID")
+let docID=document.getElementById("docID")
 let Specialization=document.getElementById("dept")
 let exp=document.getElementById("exp")
 let email=document.getElementById("email")
@@ -16,7 +16,7 @@ form.addEventListener("submit",function(e){
     data=
     {
         name:name.value,
-        docId:docId.value,
+        docID:docID.value,
         Specialization:Specialization.value,
         exp:exp.value,
         email:email.value,
@@ -39,8 +39,8 @@ form.addEventListener("submit",function(e){
       const td8=document.createElement("td")
       
       td1.innerText=ele.name;
-      td2.innerText=ele.employeeID;
-      td3.innerText=ele.department;
+      td2.innerText=ele.docID;
+      td3.innerText=ele.Specialization;
       td4.innerText=ele.exp;
       td5.innerText=ele.email;
       td6.innerText=ele.mbl;
