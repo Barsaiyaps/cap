@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <input type="text" id="myInput" >
+    <button id="myButton" type="submit" onclick="show()">
+        Submit
+    </button>
+    <h5></h5>
 </body>
 </html>
+<script>
+   function show(){
+    alert(document.getElementById("myInput").value)
+    document.querySelector("h5").innerText=document.getElementById("myInput").value
+   }
+</script>
