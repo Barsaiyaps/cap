@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Helllo World</h1>
+</body>
+</html>
+<script>
+    
+    function BankAccount (accountNumber,name,type,balance ){
+        let obj={}
+        this.accountNumber  =accountNumber;
+        this.name   = name;
+        this.type=type;
+        this.balance=balance
+        this.active=true
+    }
+BankAccount.prototype.deposit=function(amount){
+    if(amount>0){
+        this.balance+=amount;
+        console.log('depositd ${amount}. New Balance ${this.balance}')
+    }else{
+        console.log('invalid deposit amount')
+
+    }
+}
+BankAccount.prototype.withdraw=function(amount){
+    if(this.ative==true && amount>0 && this.balance>=amount){
+        this.balance=amount;
+        console.log('withdrawn ${amount}. New balance ${this.balance}')
+
+    }else {
+        console.log("invalid withdrawal amount or insufficient balance")
+    }
+}
+
+function getTotalBalance(accounts){
+    let total =0;
+    for ( let acc of accounts){
+       if( acc.active) total+=acc.balance
+    }
+    return total;
+}
+let account1= new BankAccount(1,"abc","saving",1000);
+let account2= new BankAccount(1, "xyz","savings",1500);
+let account3= new BankAccount(1, "xdf","savings",15300);
+let account4= new BankAccount(1, "dfz","savings",1200);
+
+arr=[account1,account2,account3,account4];
+
+console.log(getTotalBalance(arr))
+
+</script>
+
+
+
+
+
+
+
+
