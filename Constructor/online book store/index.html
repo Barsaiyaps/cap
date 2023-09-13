@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>HELLO WORLD</h1>
+</body>
+</html>
+<script>
+    function book(title, author, genre,price){
+        let obj1={}
+        this.title=title;
+        this.author=author;
+        this.genre=genre;
+        this.price=price;
+       
+    }
+    function author1(name, birthYear,nationality){
+        obj2={}
+        this.name;
+        this.birthYear;
+        this.nationality;
+    }
+
+book.prototype.getBookInfo=function(lib){
+       console.log(this.title+"-"+this.author+"-"+this.genre+"-"+this.price)
+    }
+
+
+let book1=new book("one piece","oda","comic",50)
+let book2=new book("bleach","oda1","comic",60)
+let book3=new book("death note","oda2","comic",70)
+let book4=new book("one punch man","oda3","comic",80)
+let book5=new book("naruto","oda4","comic",40)
+
+//let arr=[book1,book2,book3,book4,book5]
+
+book2.getBookInfo("pankaj")
+let arr=[book1,book2,book3]
+
+for(let i=0;i<arr.length;i++){
+ console.log(arr[i])
+}
+console.log(arr)
+</script>
