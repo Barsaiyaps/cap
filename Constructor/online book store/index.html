@@ -20,13 +20,13 @@
     }
     function author1(name, birthYear,nationality){
         obj2={}
-        this.name;
-        this.birthYear;
-        this.nationality;
+        this.name=name;
+        this.birthYear=birthYear;
+        this.nationality=nationality;
     }
 
 book.prototype.getBookInfo=function(lib){
-       console.log(this.title+"-"+this.author+"-"+this.genre+"-"+this.price)
+       console.log("TITLE="+this.title+"  AUTHOR="+this.author+"  Genre="+this.genre+"  Price="+this.price)
     }
 
 
@@ -39,10 +39,14 @@ let book5=new book("naruto","oda4","comic",40)
 //let arr=[book1,book2,book3,book4,book5]
 
 book2.getBookInfo("pankaj")
+book3.getBookInfo("pankaj")
+book4.getBookInfo("pankaj")
+book5.getBookInfo("pankaj")
+
 let arr=[book1,book2,book3]
 
 for(let i=0;i<arr.length;i++){
  console.log(arr[i])
 }
-console.log(arr)
+
 </script>
