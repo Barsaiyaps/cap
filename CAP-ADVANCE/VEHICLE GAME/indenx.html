@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+function vehicle(brand,model,speed,fueltype){
+    this.brand=brand;
+    this.model=model;
+    this.speed=speed;
+    this.fueltype=fueltype;
+}
+
+vehicle.prototype.accelarate=function(){
+    console.log("SPEED INCREASES")
+}
+
+vehicle.prototype.brake=function(){
+    console.log("SPEED DECREASES")
+}
+
+vehicle.prototype.refuel=function(){
+    console.log("REFUELING NEEDED")
+}
+
+
+function car(wheel){
+    this.wheel=wheel;
+    this.honk=function(){
+        console.log("HONK HONK")
+    }
+}
+
+function airplane(engine,gear){
+    this.gear=gear;
+    this.engine=engine;
+    this.takeoff=function(){
+        console.log("Aeroplan is taking off")
+    }
+}
+
+
+    Object.setPrototypeOf(car.prototype,vehicle.prototype)
+    Object.setPrototypeOf(airplane.prototype,vehicle.prototype)
+
+    car1=new car("4")
+    plane1=new airplane("v87",11)
+
+    console.log(car1)
+    console.log(plane1)
+    car1.brake()
+    plane1.accelarate()
+    car1.refuel()
+    plane1.refuel()
+
+    
+</script>
+
+
+

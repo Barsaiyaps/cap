@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     function vehicle1(brand,model,wheel){
+        this.brand=brand;
+        this.model=model;
+        this.wheel=wheel;
+
+    }
+
+    vehicle1.prototype.seat=function(){
+       this.seat=5;
+    }
+
+    vehicle1.prototype.brake=function(){
+        console.log("Brake applied")
+    }
+
+    function vehicle2( brand,model,wheel, bluetooth) {
+        vehicle1.call(this, brand,model,wheel)
+        this.bluetooth = bluetooth
+      }
+
+      let veh=new vehicle2("tata","n1",4,"YES")
+
+      console.log(veh)
+
+      let veh2= Object.create(veh)
+      veh2.size="4ft"
+
+      console.log(veh2.brand)
+    </script>
+
+
