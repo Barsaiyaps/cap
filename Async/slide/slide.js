@@ -15,7 +15,11 @@ let image=[
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbg1HOw-D2P_UyWAhP-l92Lm0WlPPGNXOUvQ&usqp=CAU",
     "https://assets.mspimages.in/gear/wp-content/uploads/2023/03/OTT-Mar-1-2023.jpg",
     "https://images.thedirect.com/media/article_full/marvel-dc-2023-superhero-movies.jpg",
-
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbaj5p08QlowIu6bhzY-2GcJCnEHcJKp2tIQ&usqp=CAU",
+    "https://imgeng.jagran.com/images/2023/sep/VinDiesel1695725240731.jpg",
+    "https://netstorage-tuko.akamaized.net/images/d9ec888f63cccc25.jpg?imwidth=900",
+    "https://www.91-cdn.com/hub/wp-content/uploads/2023/09/OTT-releases-this-week-October-4th.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2EQmHoUmHCN8kxQ2QZM83ybLvO3jLmexrxw&usqp=CAU"
 ]
 let main=document.getElementById("main")
 let ele=document.createElement("img")
